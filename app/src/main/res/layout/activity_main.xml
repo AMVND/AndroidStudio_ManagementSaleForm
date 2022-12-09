@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lltextbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="9dp"
+        >
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="335dp"
+            android:layout_height="69dp"
+            android:background="@color/teal_700"
+            android:padding="15dp"
+            android:text="TT Shop"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="75dp"
+            android:src="@drawable/icon"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llsearchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@id/lltextbar"
+        app:layout_constraintLeft_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/edtTim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:background="@drawable/gray_rounded_shape"
+            android:drawableLeft="@drawable/ic_search_gray_24dp"
+            android:drawablePadding="8dp"
+            android:hint="Nhập nhà sản xuất ?"
+            android:padding="12dp"
+            android:textColorHint="#9ea1b0" />
+
+        <Button
+            android:id="@+id/btnTim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="Tìm"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcview"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llsearchbar"
+        tools:layout_editor_absoluteX="16dp" />
+    <ImageView
+        android:id="@+id/imgEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.1"
+        android:src="@drawable/ic_empty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.4"
+        android:text="No Data."
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgEmpty" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnThem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_add"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
