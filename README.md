@@ -25,9 +25,7 @@ I try to create a project where you can connect from two table of data by the `*
 
 #####How to use
 >
-> Just use `*git clone*`
+> Just use 
+git clone
 >
-> 
-  
-                                                           # THE END
  
