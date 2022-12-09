@@ -16,16 +16,17 @@ I try to create a project where you can connect from two table of data by the `*
 #####Linh Kiện
 |   malk  |  manxslk   | tenlk |  gia | soluong |
 | :------:|:----------:|:-----:|:----:|:-------:|
+|         |            |       |      |         |
+
 
 
 ##### Nhà sản xuất
 |  mansx  |    tennsx  | diachi|  sdt |
 | :------:|:----------:|:-----:|:----:|
+|         |            |       |      |
 
 
 #####How to use
->
-> Just use 
-git clone
->
+
+ git clone
  
